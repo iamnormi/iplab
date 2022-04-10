@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>User Login</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1" />
+  <script type="text/javascript" charset="utf-8">
+    function Validate(form1){
+      var retval=true;
+      var username=form1.uname.value;
+      var password=form1.passwd.value;
+      if(username.length<8){
+        retval=false;
+        window.alert("Username less than 8 chars");
+      }
+      if(password.length<6){
+        retval=false;
+        window.alert("Password less than 6 chars");
+        form1.passwd.value="";
+      }
+      if(retval==true){
+        location.replace('profile.html');
+      }
+      return retval;
+      }
+  </script> 
+    </head>
+    <link rel="stylesheet" href="style.css">
+    <body>
+        <Center><h1>User Login</h1></Center>
+        <hr>
+            <center>
+                <form name="form1" onSubmit="Validate(this)">
+                    Username:
+                    <input type="text" name="uname">
+                    <br>Password:
+                    <input type="password" name="passwd">
+                    <br>
+                    <input type="submit" name="bt" value="Submit">
+                </form>
+            </center>
+            <br>
+        <center>
+            <div>
+                <a href="payment.html" value="">Payment Using Credit Card </a>
+                <br>
+                <a href="register.html">Register User</a>
+        </center>
+
+    </body>
+</html>
