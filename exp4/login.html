@@ -4,24 +4,9 @@
     <title>User Login</title>
    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1" />
   <script type="text/javascript" charset="utf-8">
-    function Validate(form1){
-      var retval=true;
-      var username=form1.uname.value;
-      var password=form1.passwd.value;
-      if(username.length<8){
-        retval=false;
-        window.alert("Username less than 8 chars");
-      }
-      if(password.length<6){
-        retval=false;
-        window.alert("Password less than 6 chars");
-        form1.passwd.value="";
-      }
-      if(retval==true){
-        location.replace('profile.html');
-      }
-      return retval;
-      }
+      function redt(){
+window.location = "profile.html";
+      }      
   </script> 
     </head>
     <link rel="stylesheet" href="style.css">
@@ -29,15 +14,14 @@
         <Center><h1>User Login</h1></Center>
         <hr>
             <center>
-                <form name="form1" onSubmit="Validate(this)">
+                <form name="form1">
                     Username:
                     <input type="text" name="uname">
                     <br>Password:
                     <input type="password" name="passwd">
-                    <br>
-                    <input type="submit" name="bt" value="Submit">
-                </form>
+		</form>
             </center>
+	    <center><button name="url" onClick="redt()">Login</button></center>
             <br>
         <center>
             <div>
